@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Mood Bottle Presentation</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;900&family=Tajawal:wght@300;400;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div class="presentation-container">
+
+        <!-- Navigation Controls -->
+        <div class="navigation-controls">
+            <button id="prevBtn" class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+            <div class="slide-counter"><span id="currentSlide">1</span> / 10</div>
+            <button id="nextBtn" class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+        </div>
+
+        <!-- Slides -->
+        <div class="slides-wrapper">
+
+            <!-- Slide 1: Title -->
+            <section class="slide active" id="slide-1">
+                <div class="content-center">
+                    <div class="glowing-icon"><i class="fas fa-tint"></i></div>
+                    <h1 class="main-title">Smart Mood Bottle</h1>
+                    <p class="subtitle">رفيقك الذكي للحفاظ على ترطيبك وصحتك</p>
+                </div>
+            </section>
+
+            <!-- Slide 2: Problem -->
+            <section class="slide" id="slide-2">
+                <div class="split-layout">
+                    <div class="left-panel">
+                        <h2>المشكلة:<br>لماذا ننسى شرب الماء؟</h2>
+                    </div>
+                    <div class="right-panel">
+                        <div class="card">
+                            <div class="card-icon"><i class="fas fa-hourglass-half"></i></div>
+                            <h3>النسيان</h3>
+                            <p>في ظل روتين الحياة السريع، ينسى الأغلبية شرب كمية كافية من الماء، مما يحولها إلى "حاجة
+                                منسية" بدلاً من عادة يومية.</p>
+                        </div>
+                        <div class="card">
+                            <div class="card-icon"><i class="fas fa-head-side-virus"></i></div>
+                            <h3>الجفاف والتعب</h3>
+                            <p>يؤدي قلة شرب الماء إلى الشعور بالإرهاق، الصداع، وضعف التركيز، مما يؤثر على الإنتاجية
+                                والصحة العامة.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 3: Solution -->
+            <section class="slide" id="slide-3">
+                <div class="content-center">
+                    <h2 class="neon-text">ما هي Smart Mood Bottle؟</h2>
+                    <p class="description">زجاجة مياه ذكية تحول شرب الماء إلى تجربة ممتعة وتفاعلية.</p>
+
+                    <div class="bottle-showcase">
+                        <img src="assets/images/bottle_1.jpg" alt="Smart Mood Bottle" class="floating-bottle">
+                        <div class="glow-ring"></div>
+                    </div>
+
+                    <ul class="feature-list">
+                        <li><i class="fab fa-bluetooth-b"></i> تتصل بالهاتف عبر البلوتوث</li>
+                        <li><i class="fas fa-lightbulb"></i> إضاءة LED تتغير حسب الحالة</li>
+                        <li><i class="fas fa-chart-line"></i> مستشعرات دقيقة لقياس الاحتياج</li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- Slide 4: Features -->
+            <section class="slide" id="slide-4">
+                <h2>مميزات تجعلها فريدة</h2>
+                <div class="grid-layout">
+                    <div class="feature-card">
+                        <i class="fas fa-filter"></i>
+                        <h3>فلاتر تنقية</h3>
+                        <p>تضمن لك مياه نقية وصحية في كل رشفة.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h3>تطبيق ذكي</h3>
+                        <p>يرسل إشعارات تذكيرية ويتابع استهلاكك اليومي.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-smile"></i>
+                        <h3>إضاءة Mood</h3>
+                        <p>تتفاعل معك وتذكرك بالشرب بإضاءة جذابة.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-ruler-vertical"></i>
+                        <h3>أحجام متنوعة</h3>
+                        <p>متوفرة بعدة مقاسات لتناسب جميع احتياجاتك.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 5: Mechanism -->
+            <section class="slide" id="slide-5">
+                <h2>آلية العمل</h2>
+                <div class="steps-container">
+                    <div class="step">
+                        <div class="step-circle">1</div>
+                        <h3>استشعار</h3>
+                        <p>يحدد المستشعر مستوى الماء وحاجة جسمك.</p>
+                    </div>
+                    <div class="arrow"><i class="fas fa-long-arrow-alt-left"></i></div>
+                    <div class="step">
+                        <div class="step-circle">2</div>
+                        <h3>تنبيه ضوئي</h3>
+                        <p>تضيء الزجاجة لتذكيرك بلطف.</p>
+                    </div>
+                    <div class="arrow"><i class="fas fa-long-arrow-alt-left"></i></div>
+                    <div class="step">
+                        <div class="step-circle">3</div>
+                        <h3>إشعار هاتفي</h3>
+                        <p>يرسل التطبيق تنبيهاً لهاتفك لتشرب.</p>
+                    </div>
+                    <div class="arrow"><i class="fas fa-long-arrow-alt-left"></i></div>
+                    <div class="step">
+                        <div class="step-circle">4</div>
+                        <h3>تتبع</h3>
+                        <p>يتم تسجيل الكمية المستهلكة في سجلك اليومي.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 6: Target Audience -->
+            <section class="slide" id="slide-6">
+                <h2>الفئات المستهدفة</h2>
+                <div class="audience-container">
+                    <div class="audience-card student">
+                        <div class="overlay"></div>
+                        <h3>طلبة الجامعات</h3>
+                        <p>للتركيز أثناء الدراسة الطويلة.</p>
+                    </div>
+                    <div class="audience-card athlete">
+                        <div class="overlay"></div>
+                        <h3>الرياضيين</h3>
+                        <p>لتعويض السوائل في الجيم.</p>
+                    </div>
+                    <div class="audience-card summer">
+                        <div class="overlay"></div>
+                        <h3>محبي الصيف</h3>
+                        <p>لمن يقضون وقتاً طويلاً في الخارج.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 7: Technology -->
+            <section class="slide" id="slide-7">
+                <h2>تكنولوجيا متقدمة</h2>
+                <div class="tech-layout">
+                    <div class="tech-text">
+                        <p>تعتمد Smart Mood Bottle على خوارزميات ذكية لحساب احتياج الجسم للماء بناءً على الوزن والنشاط
+                            والطقس.</p>
+                        <div class="badges">
+                            <span class="badge"><i class="fas fa-battery-full"></i> بطارية تدوم طويلاً</span>
+                            <span class="badge"><i class="fas fa-sync"></i> مزامنة تلقائية</span>
+                            <span class="badge"><i class="fas fa-leaf"></i> مواد صديقة للبيئة</span>
+                        </div>
+                    </div>
+                    <div class="tech-image">
+                        <img src="assets/images/app_mockup.png" alt="App Dark Mode" class="app-mockup">
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 8: Marketing -->
+            <section class="slide" id="slide-8">
+                <h2>استراتيجية التسويق</h2>
+                <div class="marketing-split">
+                    <div class="market-place">
+                        <h3><i class="fas fa-store"></i> المكان (Place)</h3>
+                        <p>البيع المباشر عبر منصات التواصل الاجتماعي:</p>
+                        <ul>
+                            <li>Instagram Store</li>
+                            <li>TikTok Shop</li>
+                        </ul>
+                    </div>
+                    <div class="market-promo">
+                        <h3><i class="fas fa-bullhorn"></i> الترويج (Promotion)</h3>
+                        <p>الاعتماد على التسويق المؤثر:</p>
+                        <ul>
+                            <li>التعاون مع الإنفلونسرز</li>
+                            <li>الإعلانات الممولة</li>
+                            <li>المسابقات والهدايا</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Slide 9: Price -->
+            <section class="slide" id="slide-9">
+                <div class="price-container">
+                    <h2>سعر تنافسي</h2>
+                    <div class="price-circle">
+                        <span class="currency">EGP</span>
+                        <span class="amount">199</span>
+                    </div>
+                    <p class="price-text">استثمار بسيط لصحتك وراحتك.</p>
+                </div>
+            </section>
+
+            <!-- Slide 10: Conclusion -->
+            <section class="slide" id="slide-10">
+                <div class="content-center">
+                    <h2 class="final-title">Smart Mood Bottle</h2>
+                    <div class="final-bottle-container">
+                        <img src="assets/images/bottle_3.jpg" alt="Smart Mood Bottle" class="final-bottle">
+                    </div>
+                    <h3 class="tagline">Stay Hydrated, Stay Bright!</h3>
+                </div>
+            </section>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

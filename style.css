@@ -1,0 +1,565 @@
+:root {
+    --neon-aqua: #00E5FF;
+    --deep-black: #121212;
+    --neon-yellow: #FFD600;
+    --surface-dark: #1E1E1E;
+    --text-white: #FFFFFF;
+    --text-gray: #B0BEC5;
+    --dark-blue-overlay: #0D1117;
+    --font-heading: 'Cairo', sans-serif;
+    --font-body: 'Tajawal', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--deep-black);
+    color: var(--text-white);
+    overflow: hidden;
+    height: 100vh;
+    width: 100vw;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+}
+
+.presentation-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+/* Navigation */
+.navigation-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 1000;
+    background-color: #2C2C2C;
+    padding: 10px 20px;
+    border-radius: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.nav-btn {
+    background-color: var(--neon-aqua);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.nav-btn:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px var(--neon-aqua);
+}
+
+.nav-btn i {
+    color: var(--deep-black);
+    font-size: 1.2rem;
+}
+
+.slide-counter {
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    color: var(--text-white);
+}
+
+/* Slides Wrapper */
+.slides-wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+    text-align: center;
+}
+
+.slide.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Slide 1: Title */
+#slide-1 {
+    background-color: var(--deep-black);
+}
+
+.glowing-icon {
+    font-size: 5rem;
+    color: var(--neon-aqua);
+    text-shadow: 0 0 20px var(--neon-aqua);
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+}
+
+.main-title {
+    font-size: 4rem;
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+}
+
+/* Slide 2: Problem */
+#slide-2 .split-layout {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+#slide-2 .left-panel {
+    width: 40%;
+    background-color: #006064;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+#slide-2 .left-panel h2 {
+    font-size: 3rem;
+    color: var(--text-white);
+    text-align: right;
+}
+
+#slide-2 .right-panel {
+    width: 60%;
+    background-color: var(--deep-black);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+    padding: 40px;
+}
+
+.card {
+    background-color: var(--surface-dark);
+    padding: 20px;
+    border-radius: 15px;
+    border: 1px solid #333;
+    text-align: right;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    border-color: var(--neon-aqua);
+}
+
+.card-icon {
+    font-size: 2rem;
+    color: var(--neon-aqua);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+}
+
+.card h3 {
+    color: var(--text-white);
+    margin-bottom: 10px;
+}
+
+.card p {
+    color: var(--text-gray);
+}
+
+/* Slide 3: Solution */
+.neon-text {
+    color: var(--neon-aqua);
+    text-shadow: 0 0 10px rgba(0, 229, 255, 0.5);
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.bottle-showcase {
+    position: relative;
+    margin: 30px 0;
+}
+
+.floating-bottle {
+    width: 200px;
+    height: auto;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 15px var(--neon-aqua));
+    border-radius: 20px;
+}
+
+.feature-list {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.feature-list li {
+    font-size: 1.2rem;
+    color: var(--text-white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.feature-list i {
+    color: var(--neon-yellow);
+}
+
+/* Slide 4: Features */
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.feature-card {
+    background-color: var(--surface-dark);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid transparent;
+}
+
+.feature-card:hover {
+    background-color: #2C2C2C;
+    border-color: var(--neon-aqua);
+    box-shadow: 0 0 15px rgba(0, 229, 255, 0.2);
+}
+
+.feature-card i {
+    font-size: 3rem;
+    color: var(--neon-aqua);
+    margin-bottom: 20px;
+}
+
+/* Slide 5: Mechanism */
+.steps-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.step {
+    text-align: center;
+    width: 200px;
+}
+
+.step-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #000;
+    border: 2px solid var(--neon-yellow);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--text-white);
+    margin: 0 auto 20px;
+    box-shadow: 0 0 10px rgba(255, 214, 0, 0.3);
+}
+
+.arrow {
+    font-size: 2rem;
+    color: var(--text-white);
+}
+
+/* Slide 6: Audience */
+.audience-container {
+    display: flex;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.audience-card {
+    width: 250px;
+    height: 350px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.audience-card:hover {
+    transform: scale(1.05);
+}
+
+.audience-card.student {
+    background: linear-gradient(135deg, rgba(21, 101, 192, 0.7), rgba(13, 71, 161, 0.8)), url('assets/images/student.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.audience-card.athlete {
+    background: linear-gradient(135deg, rgba(230, 81, 0, 0.7), rgba(191, 54, 12, 0.8)), url('assets/images/athlete.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.audience-card.summer {
+    background: linear-gradient(135deg, rgba(27, 94, 32, 0.7), rgba(0, 77, 64, 0.8)), url('assets/images/summer.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.audience-card h3 {
+    z-index: 2;
+    margin-bottom: 10px;
+}
+
+.audience-card p {
+    z-index: 2;
+    color: #E0E0E0;
+}
+
+/* Slide 7: Technology */
+.tech-layout {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.tech-text {
+    width: 50%;
+    text-align: right;
+}
+
+.badges {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.badge {
+    background-color: rgba(255, 214, 0, 0.1);
+    border: 1px solid var(--neon-yellow);
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: var(--text-white);
+    width: fit-content;
+}
+
+.tech-image {
+    width: 40%;
+}
+
+.app-mockup {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 229, 255, 0.2);
+}
+
+/* Slide 8: Marketing */
+.marketing-split {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 80%;
+    margin-top: 40px;
+}
+
+.market-place,
+.market-promo {
+    padding: 30px;
+    border-radius: 20px;
+    text-align: right;
+}
+
+.market-place {
+    background-color: #0D47A1;
+}
+
+.market-promo {
+    background-color: #1B5E20;
+}
+
+.market-place ul,
+.market-promo ul {
+    list-style: none;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+
+.market-place li,
+.market-promo li {
+    margin-bottom: 5px;
+}
+
+/* Slide 9: Price */
+#slide-9 {
+    background: linear-gradient(135deg, #000000, #006064);
+}
+
+.price-circle {
+    width: 200px;
+    height: 200px;
+    background-color: var(--surface-dark);
+    border: 4px solid var(--neon-yellow);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 40px auto;
+    box-shadow: 0 0 30px rgba(255, 214, 0, 0.2);
+}
+
+.currency {
+    font-size: 1.5rem;
+    color: var(--text-gray);
+}
+
+.amount {
+    font-size: 4rem;
+    font-weight: 900;
+    color: var(--text-white);
+}
+
+.price-text {
+    font-size: 1.5rem;
+    color: var(--neon-aqua);
+}
+
+/* Slide 10: Conclusion */
+#slide-10 {
+    background-color: #000000;
+}
+
+.final-bottle-container {
+    margin: 30px 0;
+}
+
+.final-bottle {
+    width: 250px;
+    filter: drop-shadow(0 0 30px rgba(0, 229, 255, 0.4));
+    border-radius: 20px;
+}
+
+.tagline {
+    font-size: 3rem;
+    color: var(--neon-yellow);
+    text-shadow: 0 0 20px rgba(255, 214, 0, 0.5);
+    margin-top: 20px;
+}
+
+/* Animations */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.1);
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 2.5rem;
+    }
+
+    #slide-2 .split-layout {
+        flex-direction: column;
+    }
+
+    #slide-2 .left-panel,
+    #slide-2 .right-panel {
+        width: 100%;
+        height: 50%;
+    }
+
+    .grid-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .steps-container {
+        flex-direction: column;
+    }
+
+    .arrow {
+        transform: rotate(90deg);
+    }
+
+    .audience-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tech-layout {
+        flex-direction: column;
+    }
+
+    .tech-text,
+    .tech-image {
+        width: 100%;
+        text-align: center;
+    }
+}
